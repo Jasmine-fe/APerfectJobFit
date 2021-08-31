@@ -40,9 +40,11 @@ def filterSimilarityWords(inputList, thresholdRatio=0.7):
     if len(inputList) > 0:
         li = [inputList[0]]
         for word in inputList:
+            flag = 1
             for liWord in li:
                 ratio = difflib.SequenceMatcher(None, word, liWord).ratio()
-                if ratio < thresholdRatio:
-                    li.append(word)
+                if ratio > thresholdRatio:
+                    flag = -1
                     break
+            flag == 1 and li.append(word)
     return li
