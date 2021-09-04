@@ -118,7 +118,9 @@ def getKeyWords(jobDescriptionText, keywordNum=10):
 
 
 def getSummarization(jobDescriptionText, ratio=0.1):
-    return summarize(jobDescriptionText, ratio=ratio)
+    text = summarize(jobDescriptionText, ratio=ratio)
+    text = re.sub("\n", " ", text)
+    return text
 
 
 def generateDFtoHTML(df, index, htmlFileName):
