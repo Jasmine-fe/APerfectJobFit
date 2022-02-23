@@ -11,7 +11,7 @@ The AI model will extract keywords and find important paragraph from a job descr
 
 ---
 
-### How to  - Example 
+### Get started - how to 
 
 - **Match Score**
 
